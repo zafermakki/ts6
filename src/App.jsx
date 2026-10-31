@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
+import { HashRouter , Outlet, Route, Routes } from 'react-router-dom';
 
 import Sidebar from './components/layout/Sidebar';
 import Topbar from './components/layout/Topbar';
@@ -118,7 +118,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <EngagementProvider>
-        <BrowserRouter>
+        <HashRouter >
           <Routes>
             <Route element={<MainLayout />}>
               <Route path="/" element={<FeedPage />} />
@@ -133,7 +133,7 @@ export default function App() {
               <Route path="*" element={<NotFoundPage />} />
             </Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter >
       </EngagementProvider>
     </ThemeProvider>
   );
